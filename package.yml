@@ -1,0 +1,7 @@
+version: 1
+packages:
+  - version: commit:fe9f4398fa24b25d0dac242591611aaa8953ba2a
+    name: deloitte-models-reuse
+    url: https://github.com/ramkumar-palmeto/deloitte-models-reuse
+    branch: main
+

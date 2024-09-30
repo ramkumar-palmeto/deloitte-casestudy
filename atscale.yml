@@ -1,0 +1,6 @@
+unique_name: Deloitte Case Study
+object_type: catalog
+label: Deloitte Case Study
+aggressive_agg_promotion: false
+as_version: 1
+build_speculative_aggs: true
