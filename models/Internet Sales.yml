@@ -1,0 +1,61 @@
+unique_name: Internet Sales
+object_type: model
+label: Internet Sales
+metrics: []
+relationships:
+  - unique_name: FactSalesDS_customerid_to_DimCustomers_Customer
+    from:
+      dataset: FactSalesDS
+      join_columns:
+        - customerid
+    to:
+      dimension: DimCustomers
+      level: Customer
+  - unique_name: FactSalesDS_storeid_to_DimStores_Store Name
+    from:
+      dataset: FactSalesDS
+      join_columns:
+        - storeid
+    to:
+      dimension: DimStores
+      level: Store Name
+  - unique_name: FactSalesDS_productid_to_DimProducts_Product
+    from:
+      dataset: FactSalesDS
+      join_columns:
+        - productid
+    to:
+      dimension: DimProducts
+      level: Product
+  - unique_name: FactSalesDS_productid_to_DimProducts_Product ID
+    from:
+      dataset: FactSalesDS
+      join_columns:
+        - productid
+    to:
+      dimension: DimProducts
+      level: Product ID
+  - unique_name: FactSalesDS_salesreasonid_to_DimSalesReasons_Reason ID
+    from:
+      dataset: FactSalesDS
+      join_columns:
+        - salesreasonid
+    to:
+      dimension: DimSalesReasons
+      level: Reason ID
+  - unique_name: FactSalesDS_employeeid_to_DimEmployees_Employee Name
+    from:
+      dataset: FactSalesDS
+      join_columns:
+        - employeeid
+    to:
+      dimension: DimEmployees
+      level: Employee Name
+  - unique_name: FactSalesDS_saledate_to_DimTime_CY Date
+    from:
+      dataset: FactSalesDS
+      join_columns:
+        - saledate
+    to:
+      dimension: DimTime
+      level: CY Date
