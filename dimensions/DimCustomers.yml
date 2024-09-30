@@ -73,7 +73,7 @@ relationships:
       hierarchy: Customers
       join_columns:
         - locationid
-      level: CustomersDS_empty_attr
+      level: Customer Type
     to:
       dimension: DimLocations
       level: Location ID
