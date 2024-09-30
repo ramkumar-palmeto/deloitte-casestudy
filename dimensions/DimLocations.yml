@@ -61,5 +61,15 @@ level_attributes:
     key_columns:
       - locationid
     name_column: locationid
-
+relationships:
+  - unique_name: LocationsDS_state_to_state_map_row_security
+    from:
+      dataset: LocationsDS
+      hierarchy: Locations
+      join_columns:
+        - state
+      level: Country
+    to:
+      row_security: state_map_row_security
+    type: embedded
 type: standard
