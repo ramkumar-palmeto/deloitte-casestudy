@@ -1,0 +1,65 @@
+unique_name: DimLocations
+object_type: dimension
+label: Locations
+hierarchies:
+  - unique_name: Locations
+    label: Locations
+    levels:
+      - unique_name: Country
+      - unique_name: Region
+      - unique_name: State
+      - unique_name: City
+        secondary_attributes:
+          - unique_name: Zipcode
+            label: Zipcode
+            contains_unique_names: false
+            dataset: LocationsDS
+            is_unique_key: false
+            key_columns:
+              - zip
+            name_column: zip
+      - unique_name: Location ID
+level_attributes:
+  - unique_name: Country
+    label: Country
+    contains_unique_names: false
+    dataset: LocationsDS
+    is_unique_key: false
+    key_columns:
+      - country
+    name_column: country
+  - unique_name: State
+    label: State
+    contains_unique_names: false
+    dataset: LocationsDS
+    is_unique_key: false
+    key_columns:
+      - state
+    name_column: state
+  - unique_name: Region
+    label: Region
+    contains_unique_names: false
+    dataset: LocationsDS
+    is_unique_key: false
+    key_columns:
+      - region
+    name_column: region
+  - unique_name: City
+    label: City
+    contains_unique_names: false
+    dataset: LocationsDS
+    is_unique_key: false
+    key_columns:
+      - city
+    name_column: city
+  - unique_name: Location ID
+    label: Location ID
+    contains_unique_names: false
+    dataset: LocationsDS
+    is_hidden: true
+    is_unique_key: false
+    key_columns:
+      - locationid
+    name_column: locationid
+
+type: standard

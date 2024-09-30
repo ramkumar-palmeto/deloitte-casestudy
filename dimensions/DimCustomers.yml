@@ -1,0 +1,81 @@
+unique_name: DimCustomers
+object_type: dimension
+label: Customers
+hierarchies:
+  - unique_name: Customers
+    label: Customers
+    levels:
+      - unique_name: Customer Type
+      - unique_name: Customer Status
+      - unique_name: Customer
+        secondary_attributes:
+          - unique_name: firstname
+            label: firstname
+            contains_unique_names: false
+            dataset: CustomersDS
+            is_unique_key: false
+            key_columns:
+              - firstname
+            name_column: firstname
+          - unique_name: middlename
+            label: middlename
+            contains_unique_names: false
+            dataset: CustomersDS
+            is_unique_key: false
+            key_columns:
+              - middlename
+            name_column: middlename
+          - unique_name: lastname
+            label: lastname
+            contains_unique_names: false
+            dataset: CustomersDS
+            is_unique_key: false
+            key_columns:
+              - lastname
+            name_column: lastname
+          - unique_name: creditlimit
+            label: creditlimit
+            contains_unique_names: false
+            dataset: CustomersDS
+            is_unique_key: false
+            key_columns:
+              - creditlimit
+            name_column: creditlimit
+level_attributes:
+  - unique_name: Customer Type
+    label: Customer Type
+    contains_unique_names: false
+    dataset: CustomersDS
+    is_unique_key: false
+    key_columns:
+      - customertype
+    name_column: customertype
+  - unique_name: Customer Status
+    label: Customer Status
+    contains_unique_names: false
+    dataset: CustomersDS
+    is_unique_key: false
+    key_columns:
+      - customerstatus
+    name_column: customerstatus
+  - unique_name: Customer
+    label: Customer
+    contains_unique_names: false
+    dataset: CustomersDS
+    is_unique_key: false
+    key_columns:
+      - customerid
+    name_column: fullname
+relationships:
+  - unique_name: CustomersDS_locationid_to_DimLocations_Location ID
+    from:
+      dataset: CustomersDS
+      hierarchy: Customers
+      join_columns:
+        - locationid
+      level: CustomersDS_empty_attr
+    to:
+      dimension: DimLocations
+      level: Location ID
+    type: embedded
+type: standard

@@ -1,0 +1,37 @@
+unique_name: DimSalesReasons
+object_type: dimension
+label: Sales Reasons
+hierarchies:
+  - unique_name: Sales Reasons
+    label: Sales Reasons
+    levels:
+      - unique_name: Reason Type
+      - unique_name: Reason
+      - unique_name: Reason ID
+level_attributes:
+  - unique_name: Reason Type
+    label: Reason Type
+    contains_unique_names: false
+    dataset: SalesReasonsDS
+    is_unique_key: false
+    key_columns:
+      - salesreasontype
+    name_column: salesreasontype
+  - unique_name: Reason
+    label: Reason
+    contains_unique_names: false
+    dataset: SalesReasonsDS
+    is_unique_key: false
+    key_columns:
+      - salesreasonname
+    name_column: salesreasonname
+  - unique_name: Reason ID
+    label: Reason ID
+    contains_unique_names: false
+    dataset: SalesReasonsDS
+    is_hidden: true
+    is_unique_key: false
+    key_columns:
+      - salesreasonid
+    name_column: salesreasonid
+type: standard

@@ -1,0 +1,14 @@
+unique_name: StoresDS
+object_type: dataset
+label: StoresDS
+columns:
+  - name: storeid
+    data_type: int
+  - name: storename
+    data_type: string
+  - name: storemanagerid
+    data_type: int
+  - name: locationid
+    data_type: int
+connection_id: con_postgres_public_v2
+table: storesview

@@ -1,0 +1,18 @@
+unique_name: DimStores
+object_type: dimension
+label: Stores
+hierarchies:
+  - unique_name: Stores
+    label: Stores
+    levels:
+      - unique_name: Store Name
+level_attributes:
+  - unique_name: Store Name
+    label: Store Name
+    contains_unique_names: false
+    dataset: StoresDS
+    is_unique_key: false
+    key_columns:
+      - storeid
+    name_column: storename
+type: standard
