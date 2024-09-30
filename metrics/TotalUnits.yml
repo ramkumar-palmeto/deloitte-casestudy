@@ -1,0 +1,7 @@
+unique_name: TotalUnits
+object_type: metric
+label: Total Units
+calculation_method: sum
+column: units
+dataset: FactSalesDS
+format: general number

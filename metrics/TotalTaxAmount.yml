@@ -1,0 +1,7 @@
+unique_name: TotalTaxAmount
+object_type: metric
+label: Total Tax Amount
+calculation_method: sum
+column: Tax Amount
+dataset: FactSalesDS
+format: general number

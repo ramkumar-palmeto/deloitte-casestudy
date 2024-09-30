@@ -1,0 +1,7 @@
+unique_name: TotalProductionCost
+object_type: metric
+label: Total Production Cost
+calculation_method: sum
+column: productcost
+dataset: FactSalesDS
+format: general number

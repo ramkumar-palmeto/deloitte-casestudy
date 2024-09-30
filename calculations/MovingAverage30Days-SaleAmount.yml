@@ -1,0 +1,6 @@
+unique_name: MovingAverage30Days-SaleAmount
+object_type: metric_calc
+label: MovingAverage30Days-SaleAmount
+expression: "AVG(\n\t[DimTime].[CY Hierarchy].CurrentMember.LAG(29)\n\n\t:\n\t\n\t[DimTime].[CY Hierarchy].CurrentMember,\n\n\t[Measures].[TotalSaleAmount])"
+format: $#,##0.00
+is_hidden: false

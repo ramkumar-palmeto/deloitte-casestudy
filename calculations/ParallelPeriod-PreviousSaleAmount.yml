@@ -1,0 +1,6 @@
+unique_name: ParallelPeriod-PreviousSaleAmount
+object_type: metric_calc
+label: ParallelPeriod-PreviousSaleAmount
+expression: "(ParallelPeriod([DimTime].[CY Hierarchy].[CY Year], 1\n\t[DimTime].[CY Hierarchy].CurrentMember),\n\t[Measures].[TotalSaleAmount]\n)"
+format: $#,##0.00
+is_hidden: false

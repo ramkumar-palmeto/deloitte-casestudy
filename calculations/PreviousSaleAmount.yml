@@ -1,0 +1,8 @@
+unique_name: PreviousSaleAmount
+object_type: metric_calc
+label: PreviousSaleAmount
+expression: >-
+  ([DimTime].[CY Hierarchy].CurrentMember.PrevMember,
+  [Measures].[TotalSaleAmount])
+format: $#,##0.00
+is_hidden: false

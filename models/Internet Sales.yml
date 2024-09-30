@@ -1,7 +1,29 @@
 unique_name: Internet Sales
 object_type: model
 label: Internet Sales
-metrics: []
+metrics:
+  - unique_name: SaleCount
+    folder: Order Metrics
+  - unique_name: TotalUnits
+    folder: Order Metrics
+  - unique_name: TotalSaleAmount
+    folder: Order Metrics
+  - unique_name: TotalProductionCost
+    folder: Order Metrics
+  - unique_name: TotalProfit
+    folder: Order Metrics
+  - unique_name: TotalTaxAmount
+    folder: Order Metrics
+  - unique_name: Growth-PreviousSaleAmount
+    folder: Order Advanced Metrics
+  - unique_name: PreviousSaleAmount
+    folder: Order Advanced Metrics
+  - unique_name: ParallelPeriod-PreviousSaleAmount
+    folder: Order Advanced Metrics
+  - unique_name: Growth-ParallelPeriod-PreviousSaleAmount
+    folder: Order Advanced Metrics
+  - unique_name: MovingAverage30Days-SaleAmount
+    folder: Order Advanced Metrics
 relationships:
   - unique_name: FactSalesDS_customerid_to_DimCustomers_Customer
     from:

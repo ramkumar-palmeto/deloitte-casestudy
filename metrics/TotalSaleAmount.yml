@@ -1,0 +1,7 @@
+unique_name: TotalSaleAmount
+object_type: metric
+label: Total Sale Amount
+calculation_method: sum
+column: saleamount
+dataset: FactSalesDS
+format: general number

@@ -1,0 +1,7 @@
+unique_name: TotalProfit
+object_type: metric
+label: Total Profit
+calculation_method: sum
+column: Profit
+dataset: FactSalesDS
+format: general number

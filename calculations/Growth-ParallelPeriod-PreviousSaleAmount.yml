@@ -1,0 +1,9 @@
+unique_name: Growth-ParallelPeriod-PreviousSaleAmount
+object_type: metric_calc
+label: Growth-ParallelPeriod-PreviousSaleAmount
+expression: |-
+  ([DimTime].[CY Hierarchy].CurrentMember, [Measures].[TotalSaleAmount])
+  -
+  [Measures].[ParallelPeriod-PreviousSaleAmount]
+format: $#,##0.00
+is_hidden: false

@@ -1,0 +1,11 @@
+unique_name: Growth-PreviousSaleAmount
+object_type: metric_calc
+label: Growth-PreviousSaleAmount
+expression: |-
+  ([DimTime].[CY Hierarchy].CurrentMember,
+    [Measures].[TotalSaleAmount])
+  -
+  ([DimTime].[CY Hierarchy].CurrentMember.PrevMember,
+    [Measures].[TotalSaleAmount])
+format: $#,##0.00
+is_hidden: false

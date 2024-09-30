@@ -1,0 +1,7 @@
+unique_name: SaleCount
+object_type: metric
+label: Sale Count
+calculation_method: count distinct
+column: saleid
+dataset: FactSalesDS
+format: general number
