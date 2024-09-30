@@ -6,31 +6,6 @@ hierarchies:
     label: Employees
     levels:
       - unique_name: Employee Name
-        secondary_attributes:
-          - unique_name: firstname
-            label: firstname
-            contains_unique_names: false
-            dataset: EmployeesDS
-            is_unique_key: false
-            key_columns:
-              - firstname
-            name_column: firstname
-          - unique_name: middlename
-            label: middlename
-            contains_unique_names: false
-            dataset: EmployeesDS
-            is_unique_key: false
-            key_columns:
-              - middlename
-            name_column: middlename
-          - unique_name: lastname
-            label: lastname
-            contains_unique_names: false
-            dataset: EmployeesDS
-            is_unique_key: false
-            key_columns:
-              - lastname
-            name_column: lastname
 level_attributes:
   - unique_name: Employee Name
     label: Employee Name
