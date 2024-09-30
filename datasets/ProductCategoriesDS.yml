@@ -1,0 +1,10 @@
+unique_name: ProductCategoriesDS
+object_type: dataset
+label: ProductCategoriesDS
+columns:
+  - name: productcategoryid
+    data_type: int
+  - name: productcategoryname
+    data_type: string
+connection_id: con_postgres_public_v2
+table: productcategoriesview

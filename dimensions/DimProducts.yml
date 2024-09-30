@@ -1,0 +1,92 @@
+unique_name: DimProducts
+object_type: dimension
+label: Products
+hierarchies:
+  - unique_name: Color-Size
+    label: Color-Size
+    levels:
+      - unique_name: Color
+      - unique_name: Size
+      - unique_name: Product ID
+  - unique_name: Product Line
+    label: Product Line
+    levels:
+      - unique_name: Category
+      - unique_name: Subcategory
+      - unique_name: Product
+        secondary_attributes:
+          - unique_name: Supplier
+            label: Supplier
+            contains_unique_names: false
+            dataset: ProductsDS
+            is_unique_key: false
+            key_columns:
+              - supplier
+            name_column: supplier
+level_attributes:
+  - unique_name: Color
+    label: Color
+    contains_unique_names: false
+    dataset: ProductsDS
+    is_unique_key: false
+    key_columns:
+      - color
+    name_column: color
+  - unique_name: Size
+    label: Size
+    contains_unique_names: false
+    dataset: ProductsDS
+    is_unique_key: false
+    key_columns:
+      - size
+    name_column: size
+  - unique_name: Product ID
+    label: Product ID
+    contains_unique_names: false
+    dataset: ProductsDS
+    is_hidden: true
+    is_unique_key: false
+    key_columns:
+      - productid
+    name_column: productid
+  - unique_name: Category
+    label: Category
+    contains_unique_names: false
+    dataset: ProductCategoriesDS
+    is_unique_key: false
+    key_columns:
+      - productcategoryid
+    name_column: productcategoryname
+  - unique_name: Subcategory
+    label: Subcategory
+    contains_unique_names: false
+    dataset: ProductSubcategoriesDS
+    is_unique_key: false
+    key_columns:
+      - productsubcategoryid
+    name_column: productsubcategoryname
+  - unique_name: Product
+    label: Product
+    contains_unique_names: false
+    dataset: ProductsDS
+    is_unique_key: false
+    key_columns:
+      - productid
+    name_column: name
+
+type: standard
+relationships:
+  - from:
+      dataset: ProductsDS
+      join_columns:
+        - productsubcategoryid
+    to:
+      level: Subcategory
+    type: snowflake
+  - from:
+      dataset: ProductSubcategoriesDS
+      join_columns:
+        - productcategoryid
+    to:
+      level: Category
+    type: snowflake
